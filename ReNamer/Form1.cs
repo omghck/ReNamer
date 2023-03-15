@@ -81,11 +81,6 @@ namespace ReNamer
         { 
             if(this.txtSearchfor.Text.Length > 3)
             {
-
-
-
-
-
                 txtProgress.Text = "In progress...";
                 ren.setOptions(this.chkSpaces.Checked, this.chkNumbers.Checked, this.chkLowercase.Checked, this.chkUppercase.Checked);
                 lboxFiles = ren.doWork(lboxFiles, txtSearchfor.Text.Trim(), txtReplacewith.Text.Trim(), chkRegex.Checked, workingpath, pbarProgress);
