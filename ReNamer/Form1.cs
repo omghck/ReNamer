@@ -74,7 +74,25 @@ namespace ReNamer
 
         private void ReNamer_Shown(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void txtSearchfor_KeyPress(object sender, KeyPressEventArgs e)
+        { 
+            if(this.txtSearchfor.Text.Length > 3)
+            {
+
+
+
+
+
+                txtProgress.Text = "In progress...";
+                ren.setOptions(this.chkSpaces.Checked, this.chkNumbers.Checked, this.chkLowercase.Checked, this.chkUppercase.Checked);
+                lboxFiles = ren.doWork(lboxFiles, txtSearchfor.Text.Trim(), txtReplacewith.Text.Trim(), chkRegex.Checked, workingpath, pbarProgress);
+                pbarProgress.Value = 0;
+                txtProgress.Text = "IDLE...";  
+            }
+            
         }
     }
 }

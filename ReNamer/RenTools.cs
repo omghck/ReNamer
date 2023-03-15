@@ -36,22 +36,17 @@ namespace ReNamer
             if (this.remspaces)
                 lb = removeSpaces(lb,path);
             p.Value = 20;
-            Thread.Sleep(50);
             if(this.remnumbers)
                 lb = removeNumbers(lb,path);
             p.Value = 40;
-            Thread.Sleep(50);
             if (this.touppercase)
                 lb = toUppercase(lb, path);
             p.Value = 60;
-            Thread.Sleep(50);
             if (this.tolowercase)
                 lb = toLowercase(lb, path);
             p.Value = 80;
-            Thread.Sleep(50);
             lb = searchReplace(lb,search,replace,isregex,path);
             p.Value = 100;
-            Thread.Sleep(50);
             return lb;
         }
         private ListBox removeNumbers(ListBox lb, string path)

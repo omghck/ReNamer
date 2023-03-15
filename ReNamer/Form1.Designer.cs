@@ -188,6 +188,7 @@
             txtSearchfor.Name = "txtSearchfor";
             txtSearchfor.Size = new Size(230, 23);
             txtSearchfor.TabIndex = 1;
+            txtSearchfor.KeyPress += txtSearchfor_KeyPress;
             // 
             // label2
             // 
